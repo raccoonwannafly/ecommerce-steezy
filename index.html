@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steezy clothing</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="global.css">
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- ================================================== -->
+    <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-3" href="#">
+            <img src="./assets/logo-transparent.png" alt="" 
+           width="150" height="50" style="object-fit: cover;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-5 me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+                <li class="mx-1 nav-item dropdown" id="shop-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Shop
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="mx-1 nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Most wanted</a>
+                </li>
+                <li class="mx-1nav-item">
+                    <a class="nav-link" aria-current="page" href="#">New arrival</a>
+                </li>
+                <li class="mx-1 nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Brand</a>
+                </li>
+
+            </ul>
+
+            <!-- Search bar ================= -->
+            <form class="d-flex" id="search-bar-form">
+              <img src="./assets/svg/search.svg" alt="">
+              <input class="form-control me-2 shadow-none" type="search" placeholder="Search" aria-label="Search" id="search-bar-input">
+              </button>
+            </form>
+
+            <!-- Shopping cart & Account icons ============== -->
+            <div class="" id="shopping-cart">
+                <img src="./assets/svg/cart.svg" alt="">
+            </div>
+            <div class="" id="account">
+                <img src="./assets/svg/person-fill.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- ========================================== -->
+
+      <main>
+        <div class="container-fluid">
+            <div class="container w-60 py-4 bg-light" id="breadcrumbs" style="border-radius: 0 0 10px 10px;">
+                <div class="row" style="--bs-breadcrumb-divider: '>';">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Browse products</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container px-0 d-flex gap-5 mt-4" id="productContainer">
+                <div class="col-3" id="productIndex">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Category
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <button type="button" class="btn btn-outline-dark mb-3" style="margin-inline: 34%;">Show All</button>
+                        
+                                    <div class="accordion" id="sub-accordionExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="sub-headingOne">
+                                                <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Clothing
+                                                </button>
+                                            </h2>
+                                            <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#collapseOne">
+                                                <div class="accordion-body">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="clothingMale" value="clothingMale" checked>
+                                                        <label class="form-check-label" for="clothingMale">
+                                                          Male
+                                                        </label>
+                                                      </div>
+                                                      <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="clothingFemale" value="clothingFemale">
+                                                        <label class="form-check-label" for="clothingFemale">
+                                                          Female
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="sub-headingTwo">
+                                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="false" aria-controls="sub-collapseTwo">
+                                                    Sneakers
+                                                </button>
+                                            </h2>
+                                            <div id="sub-collapseTwo" class="accordion-collapse collapse" aria-labelledby="sub-headingTwo" data-bs-parent="#collapseOne">
+                                                <div class="accordion-body">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="sneakersMale" value="sneakersMale" checked>
+                                                        <label class="form-check-label" for="sneakersMale">
+                                                          Male
+                                                        </label>
+                                                      </div>
+                                                      <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="sneakersFemale" value="sneakersFemale">
+                                                        <label class="form-check-label" for="sneakersFemale">
+                                                          Female
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item bg-white">
+                                            <h2 class="accordion-header" id="sub-headingThree">
+                                                <button class="accordion-button bg-white     collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseThree" aria-expanded="false" aria-controls="sub-collapseTwo">
+                                                    Accessories
+                                                </button>
+                                            </h2>
+                                            <div id="sub-collapseThree" class="accordion-collapse collapse" aria-labelledby="sub-headingThree" data-bs-parent="#collapseOne">
+                                                <div class="accordion-body">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="accessoriesMale" value="accessoriesMale" checked>
+                                                        <label class="form-check-label" for="accessoriesMale">
+                                                          Male
+                                                        </label>
+                                                      </div>
+                                                      <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="accessoriesFemale" value="accessoriesFemale">
+                                                        <label class="form-check-label" for="accessoriesFemale">
+                                                          Female
+                                                        </label>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    Color
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="redCheckbox">
+                                        <label class="form-check-label" for="redCheckbox">
+                                          Red
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="blueCheckbox">
+                                        <label class="form-check-label" for="blueCheckbox">
+                                          Blue
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="yellowCheckbox">
+                                        <label class="form-check-label" for="yellowCheckbox">
+                                          Yellow
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="greenCheckbox">
+                                        <label class="form-check-label" for="greenCheckbox">
+                                          Green
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapsThree" aria-expanded="true" aria-controls="collapsThree">
+                                    Size
+                                </button>
+                            </h2>
+                            <div id="collapsThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="form-check form-switch">
+                                      <input class="form-check-input" type="radio" name="size" id="sizeS">
+                                      <label class="form-check-label" for="sizeS">S</label>
+                                    </div>
+                                  
+                                    <div class="form-check form-switch">
+                                      <input class="form-check-input" type="radio" name="size" id="sizeM">
+                                      <label class="form-check-label" for="sizeM">M</label>
+                                    </div>
+                                  
+                                    <div class="form-check form-switch">
+                                      <input class="form-check-input" type="radio" name="size" id="sizeL">
+                                      <label class="form-check-label" for="sizeL">L</label>
+                                    </div>
+                                  
+                                    <div class="form-check form-switch">
+                                      <input class="form-check-input" type="radio" name="size" id="sizeXL">
+                                      <label class="form-check-label" for="sizeXL">XL</label>
+                                    </div>
+                                  </div>
+                            </div>  
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapsFour" aria-expanded="true" aria-controls="collapsFour">
+                                    Price
+                                </button>
+                            </h2>
+                            <div id="collapsFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <form class="multi-range-field my-5 pb-5 text-center">
+                                        <h4 class="h4">Price</h4>
+                                        <input id="priceRange" class="multi-range" type="range" style="width: 10rem;" min="100" max="1000" step="50"/>
+                                        <span id="price">100</span>$
+                                    </form>
+
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+
+
+                </div>
+                
+
+                <div class="col" id="productDisplay">
+
+                    <div class="row gap-2">
+                        <div class="card" style="max-width: 230px;" data-gender-pref="male">
+                            <img src="./assets/clothing/male-top-front.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title">Pale top</h5>
+                              <p class="card-text">
+                                <span class="original-price">$599.99</span>
+                                <span class="price-tag">$499.99</span>
+                              </p>
+                              <p class="card-text">
+                                <span class="badge bg-primary">Off-white</span>
+                                <span class="badge bg-primary">Male</span>
+                                <span class="badge bg-primary">Clothing</span>
+                              </p>
+                            </div>
+                        </div>
+                        <div class="card" style="max-width: 230px;" data-gender-pref="male">
+                            <img src="./assets/clothing/male-bottom-front.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title">Kaki bottom</h5>
+                              <p class="card-text">
+                                <span class="original-price">$99.99</span>
+                                <span class="price-tag">$79.99</span>
+                              </p>
+                              <p class="card-text">
+                                <span class="badge bg-primary">Off-white</span>
+                                <span class="badge bg-primary">Male</span>
+                                <span class="badge bg-primary">Clothing</span>
+                              </p>
+                            </div>
+                        </div>
+                        <div class="card" style="max-width: 230px;" data-gender-pref="female">
+                            <img src="./assets/clothing/female-top-front.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title">White top</h5>
+                              <p class="card-text">
+                                <span class="original-price">$99.99</span>
+                                <span class="price-tag">$79.99</span>
+                              </p>
+                              <p class="card-text">
+                                <span class="badge bg-primary">Off-white</span>
+                                <span class="badge bg-primary">Female</span>
+                                <span class="badge bg-primary">Clothing</span>
+                              </p>
+                            </div>
+                        </div>
+                        <div class="card" style="max-width: 230px;" data-gender-pref="female">
+                            <img src="./assets/clothing/female-bottom-front.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title">Orange trouser</h5>
+                              <p class="card-text">
+                                <span class="original-price">$99.99</span>
+                                <span class="price-tag">$79.99</span>
+                              </p>
+                              <p class="card-text">
+                                <span class="badge bg-primary">Off-white</span>
+                                <span class="badge bg-primary">Female</span>
+                                <span class="badge bg-primary">Clothing</span>
+                              </p>
+                            </div>
+                        </div>
+                        <div class="card" style="max-width: 230px;" data-gender-pref="male">
+                            <img src="./assets/clothing/male-wallet-front.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title">Off-white top</h5>
+                              <p class="card-text">
+                                <span class="original-price">$99.99</span>
+                                <span class="price-tag">$79.99</span>
+                              </p>
+                              <p class="card-text">
+                                <span class="badge bg-primary">Off-white</span>
+                                <span class="badge bg-primary">Male</span>
+                                <span class="badge bg-primary">Clothing</span>
+                              </p>
+                            </div>
+                        </div>
+                        <div class="card" style="max-width: 230px;" data-gender-pref="male">
+                            <img src="./assets/clothing/male-sneakers-front.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title">Air Max</h5>
+                              <p class="card-text">
+                                <span class="original-price">$99.99</span>
+                                <span class="price-tag">$79.99</span>
+                              </p>
+                              <p class="card-text">
+                                <span class="badge bg-primary">Off-white</span>
+                                <span class="badge bg-primary">Male</span>
+                                <span class="badge bg-primary">Clothing</span>
+                              </p>
+                            </div>
+                        </div>
+                        <div class="card" style="max-width: 230px;" data-gender-pref="female">
+                            <img src="./assets/clothing/female-sneakers-front.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title">Air Jordan</h5>
+                              <p class="card-text">
+                                <span class="original-price">$99.99</span>
+                                <span class="price-tag">$79.99</span>
+                              </p>
+                              <p class="card-text">
+                                <span class="badge bg-primary">Off-white</span>
+                                <span class="badge bg-primary">Female</span>
+                                <span class="badge bg-primary">Clothing</span>
+                              </p>
+                            </div>
+                        </div>
+                        <div class="card" style="max-width: 230px;" data-gender-pref="none">
+                            <img src="./assets/clothing/male-female-slipper-front.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                              <h5 class="card-title">Off-white top</h5>
+                              <p class="card-text">
+                                <span class="original-price">$99.99</span>
+                                <span class="price-tag">$79.99</span>
+                              </p>
+                              <p class="card-text">
+                                <span class="badge bg-primary">Off-white</span>
+                                <span class="badge bg-primary">Male</span>
+                                <span class="badge bg-primary">Female</span>
+                                <span class="badge bg-primary">Clothing</span>
+                              </p>
+                            </div>
+                        </div>
+                       
+                        
+                    </div>
+
+
+
+
+
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+
+      </main>
+
+    
+
+
+
+
+
+    
+    <script>
+        const priceRange = document.getElementById('priceRange');
+        const price = document.getElementById('price');
+
+        priceRange.addEventListener('input', () => {
+        price.textContent = priceRange.value;
+        });
+
+
+        const sizeInputs = document.querySelectorAll('input[name="size"]');
+
+        sizeInputs.forEach(input => {
+        input.addEventListener('click', () => {
+            sizeInputs.forEach(otherInput => {
+            if (otherInput !== input) {
+                otherInput.checked = false;
+            }
+            });
+        });
+        });
+    </script>
+</body>
+</html>
